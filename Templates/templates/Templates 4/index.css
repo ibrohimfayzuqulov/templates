@@ -1,0 +1,178 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap");
+
+/* universal resets and styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Kalam";
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  -webkit-tap-highlight-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+header a,
+#project a.live,
+#contact a {
+  border: 2px solid #00c6ff;
+  padding: 5px 10px;
+}
+
+header a,
+#project h3,
+#contact a,
+#contact p,
+footer {
+  font-size: 1.8rem;
+}
+
+#about,
+#project,
+#contact,
+footer {
+  padding: 4rem 0;
+}
+
+#about h2,
+#project h2,
+#contact h2 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+#about p,
+#project p,
+#project a {
+  font-size: 1.4rem;
+}
+
+#about p,
+#project p {
+  line-height: 1.6rem;
+  font-weight: 400;
+}
+
+#project img,
+#about img {
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/*utility classes*/
+.uni-width {
+  width: min(87%, 700px);
+  margin: auto;
+}
+
+.pri-color {
+  color: #00c6ff;
+}
+
+.dark-bg {
+  background: #333;
+  color: white;
+}
+
+.center-items {
+  display: grid;
+  place-items: center;
+}
+
+.text-align {
+  text-align: center;
+}
+
+/* header */
+header {
+  height: 100vh;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* about section */
+.grid-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.text-cont p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+/* project section */
+#project article:not(:last-child) {
+  margin-bottom: 7rem;
+}
+
+#project h3,
+#project p,
+#project a {
+  margin-bottom: 1.5rem;
+}
+
+a.live {
+  margin-right: 12px;
+}
+
+a.source:hover {
+  transform: translateX(2px);
+}
+
+/* contact section */
+#contact a {
+  width: min(70%, 300px);
+}
+
+#contact a:hover,
+a.live:hover,
+header a:hover {
+  background: #00c6ff;
+  color: white;
+}
+.contact-info {
+  gap: 2rem;
+}
+
+/* footer */
+footer > div,
+footer a {
+  gap: 2.5rem;
+  color: #333;
+}
+
+footer > div > div {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+/* mobile site */
+@media (max-width: 600px) {
+  .grid-cont {
+    grid-template-columns: 1fr;
+  }
+
+  header div,
+  #about .text-cont {
+    text-align: center;
+  }
+}

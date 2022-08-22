@@ -1,0 +1,205 @@
+// dirty code ahead, speed typed
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: white;
+    color: black;
+    background: #f1f1f1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.App {
+    width: 100%;
+    height: 100%;
+}
+
+.explanation {
+    font-family: serif;
+    font-size: 22px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    animation: fadeInDown 0.4s ease;
+    z-index: 1000;
+}
+
+.fauxMac {
+    position: relative;
+    width: 475px;
+    height: 168px;
+    background: #fff;
+    border: 1px solid #cacaca;
+    border-radius: 7px;
+    padding: 18px;
+    display: flex;
+    box-shadow: 0px 6px 15px 1px rgba(0, 0, 0, 0.23);
+
+    &,
+    *:not(input) {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    &.vibrate {
+        animation: shake 0.4s ease;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+        position: relative;
+        top: -6px;
+    }
+
+    .title {
+        font-weight: bold;
+        width: 90%;
+        line-height: 16px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 13px;
+        margin: 7px 0 0 0;
+    }
+
+    .password {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-size: 13px;
+        }
+
+        input {
+            margin-left: 8px;
+            width: 100%;
+            height: 25px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            outline: none;
+            border: 3px solid #93b5f6;
+            transition: 0.1s ease border;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 12px;
+
+        button {
+            font-size: 13.3px;
+            width: 65px;
+            height: 22px;
+            border-radius: 6px;
+            border: none;
+            color: #b2b2b6;
+            background: #f6f6f6;
+
+            &.ok {
+                color: white;
+                background: linear-gradient(#4692f7, #2f7cf6);
+                margin-left: 10px;
+
+                &:active {
+                    background: linear-gradient(#367de3, #2669e3);
+                }
+            }
+        }
+    }
+}
+
+.uhOh {
+    width: 700px;
+}
+
+/* also need keyframes and -moz-keyframes */
+@keyframes shake {
+    8%,
+    41% {
+        -webkit-transform: translateX(-15px);
+    }
+    25%,
+    58% {
+        -webkit-transform: translateX(15px);
+    }
+    75% {
+        -webkit-transform: translateX(-8px);
+    }
+    92% {
+        -webkit-transform: translateX(8px);
+    }
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -16%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation-duration: 10s;
+    animation-name: slidein;
+    animation-timing-function: linear;
+    z-index: 1;
+    animation-iteration-count: infinite;
+}
+
+.finish {
+    width: 60px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(80% - 5px);
+    top: calc(80% - 5px);
+}
+
+@keyframes slidein {
+    from {
+        left: 0;
+        top: 0;
+    }
+
+    to {
+        left: 80%;
+        top: 80%;
+    }
+}

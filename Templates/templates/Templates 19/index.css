@@ -1,0 +1,128 @@
+.indicator {
+    position: absolute;
+    left: 0;
+    height: 3px;
+    left: 0;
+    bottom: -0.3em;
+    position: absolute;
+    background: #fff;
+  /*   animation: 1s linear navigation forwards;
+    animation-timeline: scroll-sections; */
+  }
+  
+  
+  main {
+    max-block-size: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    block-size: 100vh;
+    inline-size: 100vw;
+    scroll-snap-align: start;
+    display: grid;
+    place-content: center;
+    position: relative;
+  }
+  
+  section:nth-of-type(odd) {
+    background: black;
+    color: white;
+  }
+  
+  h1 {
+    font-variant-numeric: tabular-nums;
+    font-size: 25vmin;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    flex-gap: 0.5ch;
+  }
+  
+  .slash {
+    font-family: Roboto, monospace;
+  }
+  
+  .stuck {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    color: #fff;
+    mix-blend-mode: difference;
+  }
+  
+  .stuck > h1 {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    will-change: transform;
+    place-content: center;
+    grid-auto-flow: column;
+  }
+  
+  [invisible] {
+    visibility: hidden;
+  }
+  
+  nav {
+    position: fixed;
+    z-index: 10;
+    mix-blend-mode: difference;
+    width: 100vw;
+    display: flex;
+    place-items: center;
+    font-size: 4vmin;
+    margin-top: 1.5em;
+  }
+  
+  .navwrapper {
+    position: relative;
+    width: min-content;
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    position: relative;
+  }
+  
+  nav li {
+    display: inline-block;
+    white-space: nowrap;
+      padding: 0.5em;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  body {
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+  }
+  
+  main {
+    font-weight: 400;
+  }

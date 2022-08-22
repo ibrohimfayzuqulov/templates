@@ -1,0 +1,315 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+    :root {
+    --col-1: #f6f4f4;
+    --col-2: #313131;
+    --col-3: #ff740c;
+    --mat-0: white;
+    --mat-1: #e91e63;
+    --mat-2: #f44336;
+    --mat-3: #ff5722;
+    --mat-4: #ffc107;
+    --mat-5: #4caf50;
+    --mat-6: #2196f3;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      font-family: 'Reem Kufi', sans-serif;
+      letter-spacing: 0.2px;
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--col-2);
+      font-size: 18px;
+      font-weight: 300;
+      background-image: url('https://ucarecdn.com/062fab98-f492-4982-9e8f-2c810c9d8806/-/preview/-/quality/smart/');
+      background-size: cover;
+      background-position: center;
+      image-rendering: optimizeSpeed;
+    }
+
+
+    .material_symbols{
+      font-family: Material Symbols Rounded;
+    }
+    .navbar{
+      background-color: var(--col-2);
+      position: fixed;
+      width: 100%;
+      height: 48px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+    }
+    .navbar ul{
+      list-style-type: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;  
+      gap: 1.2em;
+      padding-right: 1.8em;
+    position : relative;
+
+    }
+    .navbar ul a{
+      user-select: none;
+    }
+
+    .icon-btn {
+      position: relative;
+      text-decoration: none;
+      cursor: pointer;
+      color: var(--col-1);
+      width: 40px;
+      aspect-ratio: 1;
+    }
+    img{
+      max-height: 28px;
+      aspect-ratio: 1;
+      border-radius: 100%;
+    }
+    .icon-btn span{
+      font-size: 24px;
+    }
+    .icon-btn:hover span{
+      text-shadow: 0 0 10px #fff9;
+    }
+    .btn {
+      position: relative;
+      padding: 0.4em;
+      text-decoration: none;
+      cursor: pointer;
+      color: var(--col-1);
+    }
+    .hover{
+      position: relative;
+    }
+    .hover:before{
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      background-color: white;
+      transition:all 0.2s ease;
+    }
+
+    .hover:hover:before{
+      opacity: 0.2;
+      border-radius:8px ;
+    }
+    .centred-container{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+      width: 100%;
+      padding-top:25vh;
+
+    }
+   a, button {
+      text-decoration: none;
+      background-color: #0000;
+      border: none;
+      color: var(--col-2);
+      opacity: 0.8;
+    }
+    .centred-container h1,.mic{
+      text-align: center;
+      --col:var(--col-3);
+      color: var(--col);  
+      transition: color 0.2s ease;
+    }
+    .searchBox-container{
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      flex-direction: column;
+      background-color: var(--col-1);
+      border-radius: 24px;
+      width: 600px;
+      max-height: 40px;
+      overflow: hidden;
+      transition:all 0.1s ease;
+    }
+
+    .searchBox-container:focus-within{
+      border-radius: 8px;
+      max-height: 408px;
+
+    }
+    .searchBox-container>div {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 40px;
+    }
+
+    .searchBox-container .search-btn{
+      height: 40px;
+      aspect-ratio: 1;
+      font-size: 22px;
+    }
+    .searchBox-container input{
+      height: 40px;
+      flex: 1;
+      font-size: 18px;
+      padding: 0;
+      border: none;
+      background-color: #0000;
+      outline: none;
+    }
+
+    .searchBox-container>ol{
+      padding:4px ;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: stretch;
+      flex-direction: column;
+      width: 100%;
+      max-height: 360px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .searchBox-container li{
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 40px;
+      position: relative;
+    }
+    .searchBox-container li a{/**/
+      width: 100%;
+      height: 100%;
+      font-size: 18px;
+      flex: 1;
+      padding-top: 6px;
+      opacity: 1;
+      font-weight: 200;
+    }
+
+    .searchBox-container li:before{
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      background-color: var(--col-2);
+      transition:all 0.2s ease;
+    }
+    .searchBox-container li:hover:before{
+      opacity: 0.2;
+    }
+    .searchBox-container li button{
+      height: 100%;
+      aspect-ratio: 1;
+    }
+
+    .searchBox-container li button.close{
+      height: 30px;
+      aspect-ratio: 1;
+      margin: 5px;
+    }
+    .searchBox-container li button.close:before{
+      background-color: var(--col-2);
+      border-radius: 100%;
+    }
+      .theme-switcher{
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+        height: 40px;
+        max-width: 40px;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: stretch;
+        transition: all 0.5s ease;
+        border-radius: 20px;
+        background-color: var(--col-1);
+
+      }
+      .theme-switcher:hover{
+        max-width: 300px;
+        background-color: var(--col-1);
+      }
+
+      .theme-switcher:hover button{
+        transform: translateX(0);
+      }
+     /* .theme-switcher ul{
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        align-items: stretch;
+        padding: 0;
+        margin: 0;
+      }*/
+      .theme-switcher button{
+        height: 100%;
+        aspect-ratio: 1;
+        background-color: var(--col);
+        border: 8px solid white;
+        border-radius: 100%;
+        opacity: 1;
+        cursor: pointer;
+        transition:all 0.3s ease;
+        transform: translateX(calc(var(--offset) * 40px));
+        z-index:calc( 7 -  var(--offset));     
+         }
+      .theme-switcher button:hover{
+        border: 2px solid white;
+      }
+      .theme-switcher>button{
+        border-radius: 100%;
+      }
+
+.drop-down{
+}
+
+.drop-down>.drop-down-menu{
+  background-color: var(--col-2);
+  position : absolute;
+  width:80%;
+  left:0;
+  max-height :0;
+  overflow : hidden;
+  list-style-type : none;
+  margin : 0px 1.8em;
+  border-bottom-left-radius : 8px;
+  border-bottom-right-radius : 8px;
+}
+
+.drop-down:hover>.drop-down-menu{
+  max-height :400px;
+  padding :0.8em;
+}
+
+.drop-down:hover>.drop-down-menu *{
+  color : var(--col-1);
+  padding:0.2em 0.8em;
+}
+.app-list{
+  display :flex;
+  justify-content :flex-start;
+  flex-wrap :wrap;
+  padding :0;
+  margin :0;
+}
+
+.app-list li{
+  padding :0;
+  margin :0;
+}
